@@ -3,5 +3,6 @@
 use App\Http\Controllers\UrlController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/items', [UrlController::class, 'index']);
-Route::get('/items/{id}', [UrlController::class, 'show']);
+Route::get('/urls', [UrlController::class, 'index']);
+Route::post('/urls', [UrlController::class, 'create']);
+Route::delete('/urls', [UrlController::class, 'remove']);
