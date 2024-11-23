@@ -27,3 +27,8 @@ php artisan serve
 ```
 
 Abre [http://127.0.0.1:8000](http://127.0.0.1:8000) en el explorador y verifica el proyecto
+
+Realizar las pruebas unitarias con el comando
+```bash
+vendor/bin/phpunit
+```

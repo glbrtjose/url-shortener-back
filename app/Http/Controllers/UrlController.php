@@ -22,9 +22,9 @@ class UrlController extends Controller
         $url = request('url');
         $item = new Url;
         $item->url = $url;
-        $item->short_url = 'n.t/'.$id;
+        $item->short_url = 'n.t/' . $id;
         $item->save();
-        return response()->json($item);
+        return response()->json($item, 201);
     }
 
     public function remove()
@@ -32,7 +32,7 @@ class UrlController extends Controller
         $id = request('id');
         $item = Url::find($id);
         $item->delete();
-        return response()->json($item);
+        return response()->json($item, 204);
     }
 
     public function show($id)
